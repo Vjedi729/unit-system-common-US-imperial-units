@@ -1,0 +1,23 @@
+{
+  "name": "@goggles/unit-system-common-uscs-units",
+  "version": "1.0.3",
+  "description": "A subset of units from the US Customary system. This should cover all units used by an average person in daily life.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vjedi729/unit-system-common-US-imperial-units.git"
+  },
+  "author": "Vishal Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vjedi729/unit-system-common-US-imperial-units/issues"
+  },
+  "homepage": "https://github.com/Vjedi729/unit-system-common-US-imperial-units#readme",
+  "dependencies": {
+    "@goggles/unit-system": "^1.0.3",
+    "@goggles/unit-system-si-units": "^1.0.0"
+  }
+}
