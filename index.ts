@@ -12,6 +12,10 @@ uscsUnits.foot = RelativeUnit.FractionOf('foot', uscsUnits.yard, 3, 'ft' /* ["'"
 uscsUnits.inch = RelativeUnit.FractionOf('inch', uscsUnits.inch, 12, 'in' /*, ['"', 'in', 'inch'] */)
 uscsUnits.mile = RelativeUnit.MultipleOf('mile', uscsUnits.foot, 5280, 'mi')
 
+let sqIn = new CombinationUnit([[uscsUnits.foot, 2]])
+
+uscsUnits.acre = RelativeUnit.MultipleOf('acre', sqIn, 43560)
+
 let cuIn = new CombinationUnit([[uscsUnits.in, 3]])
 
 uscsUnits.gallon =      RelativeUnit.MultipleOf('gallon', cuIn, 231, 'gal')
@@ -22,7 +26,14 @@ uscsUnits.fluidOunce =  RelativeUnit.FractionOf('fluid ounce', uscsUnits.cup, 8,
 uscsUnits.tablespoon =  RelativeUnit.FractionOf('tablespoon', uscsUnits.fluidOunce, 2, 'Tbsp')
 uscsUnits.teaspoon =    RelativeUnit.FractionOf('teaspoon', uscsUnits.tablespoon, 3, 'tsp')
 
-// TODO: Add other mass units, add related weight units 
+// Add other mass units, add related weight units 
+uscsUnits.ounce =       RelativeUnit.FractionOf('ounce', uscsUnits.poundMass, 16, 'oz')
+uscsUnits.ton =         RelativeUnit.MultipleOf('ton', uscsUnits.poundMass, 2000)
+
+// TODO: Move these to "All USCS Units"
+// uscsUnits.grain =       RelativeUnit.FractionOf('grain', uscsUnits.poundMass, 7000, 'gr')
+// uscsUnits.troyOunce =   RelativeUnit.MultipleOf('troy ounce', uscsUnits.grain, 24 * 20, 'oz t')
+// uscsUnits.troyPound =   RelativeUnit.MultipleOf('troy pound', uscsUnits.troyOunce, 12, 'lb t')
 
 // Defined based on personal knowledge and https://en.wikipedia.org/wiki/Kelvin, https://en.wikipedia.org/wiki/Rankine_scale, https://en.wikipedia.org/wiki/Fahrenheit
 uscsUnits.Rankine =     RelativeUnit.MultipleOf('degrees Rankine', SIUnits.kelvin, 5/9, '°R' /*, ["°R", "°Ra", "degrees Rankine"]*/)
