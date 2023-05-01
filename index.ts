@@ -63,6 +63,7 @@ uscsUnits.Fahrenheit =  new CustomUnit(
     SIUnits.kelvin.shape, 
     (degreesF) => (5/9) * (degreesF + 459.67),
     (degreesK) => ((9/5) * degreesK) - 459.67,
+    {hasAbsoluteZero: false, isLinear: true},
     new UnitNameConstruct('degrees Fahrenheit', '°F', ["°F", "degrees Fahrenheit"])
 )
 
