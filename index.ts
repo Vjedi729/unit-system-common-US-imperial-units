@@ -12,11 +12,11 @@ uscsUnits.foot = RelativeUnit.FractionOf(uscsUnits.yard, 3,     new UnitNameCons
 uscsUnits.inch = RelativeUnit.FractionOf(uscsUnits.foot, 12,    new UnitNameConstruct('inch', 'in', ['"', 'in', 'inch']))
 uscsUnits.mile = RelativeUnit.MultipleOf(uscsUnits.foot, 5280,  new UnitNameConstruct('mile', 'mi'))
 
-let sqIn = new CombinationUnit([[uscsUnits.foot, 2]])
+let sqIn = new CombinationUnit([[uscsUnits.inch, 2]])
 
 uscsUnits.acre = RelativeUnit.MultipleOf(sqIn, 43560, new UnitNameConstruct('acre'))
 
-let cuIn = new CombinationUnit([[uscsUnits.in, 3]])
+let cuIn = new CombinationUnit([[uscsUnits.inch, 3]])
 
 uscsUnits.gallon =      RelativeUnit.MultipleOf(cuIn, 231,                  new UnitNameConstruct('gallon', 'gal'))
 uscsUnits.quart =       RelativeUnit.FractionOf(uscsUnits.gallon, 4,        new UnitNameConstruct('quart', 'qt'))

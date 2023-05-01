@@ -1,6 +1,6 @@
 {
   "name": "@goggles/unit-system-common-uscs-units",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "A subset of units from the US Customary system. This should cover all units used by an average person in daily life.",
   "main": "index.js",
   "scripts": {
