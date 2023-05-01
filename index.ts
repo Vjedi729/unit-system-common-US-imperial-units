@@ -9,7 +9,7 @@ uscsUnits.pound =   RelativeUnit.MultipleOf(SIUnits.kilogram, 0.45359237,   new 
 
 // Defined based on personal knowledge and https://en.wikipedia.org/wiki/United_States_customary_units
 uscsUnits.foot = RelativeUnit.FractionOf(uscsUnits.yard, 3,     new UnitNameConstruct('foot', 'ft', ["'", 'ft', 'foot']))
-uscsUnits.inch = RelativeUnit.FractionOf(uscsUnits.inch, 12,    new UnitNameConstruct('inch', 'in', ['"', 'in', 'inch']))
+uscsUnits.inch = RelativeUnit.FractionOf(uscsUnits.foot, 12,    new UnitNameConstruct('inch', 'in', ['"', 'in', 'inch']))
 uscsUnits.mile = RelativeUnit.MultipleOf(uscsUnits.foot, 5280,  new UnitNameConstruct('mile', 'mi'))
 
 let sqIn = new CombinationUnit([[uscsUnits.foot, 2]])
